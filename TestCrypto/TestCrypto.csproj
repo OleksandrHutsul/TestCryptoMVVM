@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="JsonForCandlesChart\**" />
+    <EmbeddedResource Remove="JsonForCandlesChart\**" />
+    <None Remove="JsonForCandlesChart\**" />
+    <Page Remove="JsonForCandlesChart\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Resource\Images\backImage.jpg" />
+    <None Remove="Resource\Images\binance.png" />
+    <None Remove="Resource\Images\columnChart.png" />
+    <None Remove="Resource\Images\key.png" />
+    <None Remove="Resource\Images\logo.png" />
+    <None Remove="Resource\Images\profile.png" />
+    <None Remove="Resource\Images\rowChart.png" />
+    <None Remove="Resource\Images\user.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FontAwesome.Sharp" Version="6.3.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="OxyPlot.Core" Version="2.1.2" />
+    <PackageReference Include="OxyPlot.Wpf" Version="2.1.2" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resource\Images\backImage.jpg" />
+    <Resource Include="Resource\Images\binance.png" />
+    <Resource Include="Resource\Images\columnChart.png" />
+    <Resource Include="Resource\Images\key.png" />
+    <Resource Include="Resource\Images\logo.png" />
+    <Resource Include="Resource\Images\profile.png" />
+    <Resource Include="Resource\Images\rowChart.png" />
+    <Resource Include="Resource\Images\user.png" />
+  </ItemGroup>
+
+</Project>

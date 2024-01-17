@@ -1,0 +1,45 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <system:String x:Key="selectOptions">* Виберіть налаштування</system:String>
+    <system:String x:Key="lightOptions">Світла</system:String>
+    <system:String x:Key="darkOptions">Темна</system:String>
+    <system:String x:Key="dashboard">Панель управління</system:String>
+    <system:String x:Key="currencyOverview">Огляд Валют</system:String>
+    <system:String x:Key="changeLanguage">Змінити мову</system:String>
+    <system:String x:Key="changeTheme">Змінити тему</system:String>
+    <system:String x:Key="save">Зберегти</system:String>
+    <system:String x:Key="fillingCurrency">* Помилка при заповненні збору даних з валют</system:String>
+    <system:String x:Key="currencySelection">* Невірний вибір валюти</system:String>
+    <system:String x:Key="enterCurrency">Вхідна валюту</system:String>
+    <system:String x:Key="inputCurrency">Вихідна валюту</system:String>
+    <system:String x:Key="outputCurrency">Виведіть валюту</system:String>
+    <system:String x:Key="chooseCurrency">Виберіть валюту</system:String>
+    <system:String x:Key="convert">Конвертувати</system:String>
+    <system:String x:Key="inputSum">Введіть суму</system:String>
+    <system:String x:Key="result">Результат</system:String>
+    <system:String x:Key="execute">Виконати</system:String>
+    <system:String x:Key="validNumber1and33">* Будь ласка, введіть дійсне число від 1 до 33.</system:String>
+    <system:String x:Key="validNumber1and100">* Будь ласка, введіть дійсне число від 1 до 100.</system:String>
+    <system:String x:Key="errorLoadingPlot">* Помилка при завантаженні та візуалізації даних.</system:String>
+    <system:String x:Key="viewChart1to33">Для перегляду графіка введіть число від 1 до 33 і натисніть кнопку Виконати</system:String>
+    <system:String x:Key="viewChart1to100">Для перегляду графіка введіть число від 1 до 100 і натисніть кнопку Виконати</system:String>
+    <system:String x:Key="inputNumber">Введіть число</system:String>
+    <system:String x:Key="invalidUser">Невірний користувач, не увійшовши в систему</system:String>
+    <system:String x:Key="marketLeaders">Лідери ринку</system:String>
+    <system:String x:Key="traidingVolume">Торговий обсяг</system:String>
+    <system:String x:Key="transaction">Транзакція</system:String>
+    <system:String x:Key="setting">Налаштування</system:String>
+    <system:String x:Key="chart">Графік</system:String>
+    <system:String x:Key="anotherOption">Інша опція</system:String>
+    <system:String x:Key="pageSetting">Сторінка, на якій можна зробити певні налаштування під себе.</system:String>
+    <system:String x:Key="pageTransaction">На цій сторінці можна конвертувати одну валюту в іншу.</system:String>
+    <system:String x:Key="pageCurrencyOverview">Сторінка показує детальну інформацію про певну валюту.</system:String>
+    <system:String x:Key="pageTraidingVolume">Сторінка показує графік обсягу торгів.</system:String>
+    <system:String x:Key="pageMarketLeaders">Сторінка показує топ N криптовалют за популярністю на ринку.</system:String>
+    <system:String x:Key="errorDisplay">* Будь ласка, введіть назву, символ або рейтинг валюти, яку ви хочете відобразити.</system:String>
+    <system:String x:Key="search">Пошук.</system:String>
+    <system:String x:Key="emptySearch">* Введіть дані для здійснення пошуку.</system:String>
+
+</ResourceDictionary>

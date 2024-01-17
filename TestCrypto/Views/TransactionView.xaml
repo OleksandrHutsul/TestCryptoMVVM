@@ -1,0 +1,236 @@
+﻿<UserControl x:Class="TestCrypto.Views.TransactionView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TestCrypto.Views"
+             xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+             xmlns:viewModel="clr-namespace:TestCrypto.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="950">
+
+    <UserControl.DataContext>
+        <viewModel:TransactionViewModel/>
+    </UserControl.DataContext>
+
+    <Border>
+        <Grid>
+            <StackPanel Orientation="Horizontal"
+                        Margin="0,0,0,50">
+                
+                <RadioButton Height="200"
+                             Width="250"
+                             Margin="10,0,0,0"
+                             Style="{StaticResource mainMenuButton}"
+                             Tag="{DynamicResource color8}"
+                             IsChecked="{Binding IsInputTextBoxEnabled}"
+                             CommandParameter="TextBox">
+
+                    <StackPanel Height="200" Width="250">
+                        <TextBlock Text="{DynamicResource enterCurrency}"
+                                   Foreground="{DynamicResource titleColor1}"
+                                   FontSize="22"
+                                   HorizontalAlignment="Left"
+                                   Margin="10,10,10,0"
+                                   FontFamily="Montserrate"
+                                   FontWeight="Medium"/>
+
+                        <TextBlock Text="{DynamicResource inputCurrency}"
+                                   Foreground="{DynamicResource titleColor2}"
+                                   FontSize="12"
+                                   FontWeight="Medium"
+                                   FontFamily="Montserrat"                             
+                                   Margin="0,10,0,0"
+                                   Padding="10,0,0,0"/>
+
+                        <TextBox x:Name="inputCurrency"
+                                 Text="{Binding DataOfInputTextBox}"
+                                 IsEnabled="{Binding IsInputTextBoxEnabled}"
+                                 FontSize="13"
+                                 Width="230"
+                                 FontWeight="Medium"
+                                 FontFamily="Montserrat"   
+                                 BorderThickness="0,0,0,2"
+                                 Height="28"
+                                 VerticalContentAlignment="Center"
+                                 Margin="5,5,10,0"
+                                 Style="{StaticResource textBox}"/>
+
+                        <TextBlock Text="{DynamicResource outputCurrency}"
+                                   Foreground="{DynamicResource titleColor2}"
+                                   FontSize="12"
+                                   FontWeight="Medium"
+                                   FontFamily="Montserrat"                             
+                                   Margin="0,10,0,0"
+                                   Padding="10,0,0,0"/>
+
+                        <TextBox x:Name="outputCurrency"
+                                 Text="{Binding DataOfOutputTextBox}"
+                                 IsEnabled="{Binding IsInputTextBoxEnabled}"
+                                 FontSize="13"
+                                 Width="230"
+                                 FontWeight="Medium"
+                                 FontFamily="Montserrat"
+                                 BorderThickness="0,0,0,2"
+                                 Height="28"
+                                 VerticalContentAlignment="Center"
+                                 Margin="5,5,10,0"
+                                 Style="{StaticResource textBox}"/>
+                    </StackPanel>
+                </RadioButton>
+
+                <RadioButton Height="200"
+                             Width="250"
+                             Margin="50,0,0,0"
+                             Style="{StaticResource mainMenuButton}"
+                             Tag="{DynamicResource color9}"
+                             IsChecked="{Binding IsInputComboBoxEnabled}"
+                             CommandParameter="ComboBox">
+
+                    <StackPanel Height="200" Width="250">
+                        <TextBlock Text="{DynamicResource chooseCurrency}"
+                                   Foreground="{DynamicResource titleColor1}"
+                                   FontSize="22"
+                                   HorizontalAlignment="Left"
+                                   Margin="10,10,10,0"
+                                   FontFamily="Montserrate"
+                                   FontWeight="Medium"/>
+
+                        <TextBlock Text="{DynamicResource inputCurrency}"
+                                   Foreground="{DynamicResource titleColor2}"
+                                   FontSize="12"
+                                   FontWeight="Medium"
+                                   FontFamily="Montserrat"                             
+                                   Margin="0,10,0,0"
+                                   Padding="10,0,0,0"/>
+
+                        <ComboBox x:Name="inputCurrencyBox"
+                                  ItemsSource="{Binding CurrencyDataCollection}" 
+                                  SelectedItem="{Binding DataOfInputComboBox}"
+                                  IsEnabled="{Binding IsInputComboBoxEnabled}"
+                                  DisplayMemberPath="Symbol" 
+                                  SelectedValuePath="Symbol" 
+                                  SelectedValue="{Binding DataOfInputComboBox, Mode=TwoWay}"
+                                  FontSize="13"
+                                  Width="230"
+                                  FontWeight="Medium"
+                                  FontFamily="Montserrat"
+                                  BorderThickness="0,0,0,2"
+                                  Height="28"
+                                  VerticalContentAlignment="Center"
+                                  Margin="5,5,10,0"
+                                  Style="{StaticResource comboBox}"/>
+
+                        <TextBlock Text="{DynamicResource outputCurrency}"
+                                   Foreground="{DynamicResource titleColor2}"
+                                   FontSize="12"
+                                   FontWeight="Medium"
+                                   FontFamily="Montserrat"                             
+                                   Margin="0,10,0,0"
+                                   Padding="10,0,0,0"/>
+
+                        <ComboBox x:Name="outputCurrencyBox"
+                                  ItemsSource="{Binding CurrencyDataCollection}" 
+                                  SelectedItem="{Binding DataOfOutputComboBox}" 
+                                  IsEnabled="{Binding IsInputComboBoxEnabled}"
+                                  DisplayMemberPath="Symbol" 
+                                  SelectedValuePath="Symbol" 
+                                  SelectedValue="{Binding DataOfOutputComboBox, Mode=TwoWay}"
+                                  FontSize="13"
+                                  Width="230"
+                                  FontWeight="Medium"
+                                  FontFamily="Montserrat"
+                                  BorderThickness="0,0,0,2"
+                                  Height="28"
+                                  VerticalContentAlignment="Center"
+                                  Margin="5,5,10,0"
+                                  Style="{StaticResource comboBox}"/>
+                    </StackPanel>
+                </RadioButton>
+
+                <RadioButton Height="200"
+                             Width="250"
+                             Margin="50,0,0,0"
+                             Style="{StaticResource mainMenuButton}"            
+                             Tag="{DynamicResource color6}">
+
+                    <StackPanel Height="200" Width="250">
+                        <TextBlock Text="{DynamicResource convert}"
+                                   Foreground="{DynamicResource titleColor1}"
+                                   FontSize="22"
+                                   HorizontalAlignment="Left"
+                                   Margin="10,10,10,0"
+                                   FontFamily="Montserrate"
+                                   FontWeight="Medium"/>
+
+                        <TextBlock Text="{DynamicResource inputSum}"
+                                   Foreground="{DynamicResource titleColor2}"
+                                   FontSize="12"
+                                   FontWeight="Medium"
+                                   FontFamily="Montserrat"                             
+                                   Margin="0,10,0,0"
+                                   Padding="10,0,0,0"/>
+
+                        <TextBox x:Name="inputSum"
+                                 Text="{Binding DataOfPriceTextBox}"
+                                 FontSize="13"
+                                 Width="230"
+                                 FontWeight="Medium"
+                                 FontFamily="Montserrat"   
+                                 BorderThickness="0,0,0,2"
+                                 Height="28"
+                                 VerticalContentAlignment="Center"
+                                 Margin="5,5,10,0"
+                                 Style="{StaticResource textBox}"/>
+
+                        <TextBlock Text="{DynamicResource result}"
+                                   Foreground="{DynamicResource titleColor2}"
+                                   FontSize="12"
+                                   FontWeight="Medium"
+                                   FontFamily="Montserrat"                             
+                                   Margin="0,10,0,0"
+                                   Padding="10,0,0,0"/>
+
+                        <TextBox x:Name="result"
+                                 Text="{Binding DataOfResultTextBox}"
+                                 FontSize="13"
+                                 Width="230"
+                                 FontWeight="Medium"
+                                 FontFamily="Montserrat"
+                                 BorderThickness="0,0,0,2"
+                                 Height="28"
+                                 VerticalContentAlignment="Center"
+                                 Margin="5,5,10,0"
+                                 IsEnabled="False"
+                                 Style="{StaticResource textBox}"/>
+                    </StackPanel>
+                </RadioButton>
+
+                <Button Command="{Binding ShowConvertCurrencyCommand}"                            
+                        Content="{DynamicResource execute}"
+                        Width="100"
+                        FontSize="12"
+                        FontFamily="Montserrat"
+                        Cursor="Hand"
+                        BorderThickness="0"
+                        Foreground="White"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Left"
+                        Margin="-170,270,0,0"
+                        Style="{StaticResource executeButton}"/>
+
+
+
+                <TextBlock Text="{Binding ErrorMessage}"
+                           Foreground="{DynamicResource errorMessage}"
+                           FontSize="12"
+                           FontWeight="Medium"
+                           FontFamily="Montserrat"                             
+                           Margin="-1300,250,0,0"
+                           Width="400"
+                           Height="30"
+                           TextWrapping="Wrap"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</UserControl>

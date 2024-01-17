@@ -1,0 +1,45 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <system:String x:Key="selectOptions">* Sélectionner des options</system:String>
+    <system:String x:Key="lightOptions">Clair</system:String>
+    <system:String x:Key="darkOptions">Foncé</system:String>
+    <system:String x:Key="dashboard">Tableau de bord</system:String>
+    <system:String x:Key="currencyOverview">Aperçu Des Devises</system:String>
+    <system:String x:Key="changeLanguage">Changer la langue</system:String>
+    <system:String x:Key="changeTheme">Changer le thème</system:String>
+    <system:String x:Key="save">Enregistrer</system:String>
+    <system:String x:Key="fillingCurrency">* Erreur lors du remplissage de la collecte de données sur les devises</system:String>
+    <system:String x:Key="currencySelection">* Sélection de devise invalide</system:String>
+    <system:String x:Key="enterCurrency">Entrer la devise</system:String>
+    <system:String x:Key="inputCurrency">Saisir la devise</system:String>
+    <system:String x:Key="outputCurrency">Sortie de devise</system:String>
+    <system:String x:Key="chooseCurrency">Choisir la devise</system:String>
+    <system:String x:Key="convert">Convertir</system:String>
+    <system:String x:Key="inputSum">Entrer la somme</system:String>
+    <system:String x:Key="result">Résultat</system:String>
+    <system:String x:Key="execute">Exécuter</system:String>
+    <system:String x:Key="validNumber1and33">* Veuillez entrer un nombre valide entre 1 et 33.</system:String>
+    <system:String x:Key="validNumber1and100">* Veuillez entrer un nombre valide entre 1 et 100.</system:String>
+    <system:String x:Key="errorLoadingPlot">* Erreur de chargement et de tracé des données.</system:String>
+    <system:String x:Key="viewChart1to33">Pour voir le graphique, entrez un nombre de 1 à 33 et appuyez sur le bouton Exécuter</system:String>
+    <system:String x:Key="viewChart1to100">Pour voir le graphique, entrez un nombre de 1 à 100 et appuyez sur le bouton Exécuter</system:String>
+    <system:String x:Key="inputNumber">Entrez un nombre</system:String>
+    <system:String x:Key="invalidUser">Utilisateur invalide, non connecté</system:String>
+    <system:String x:Key="marketLeaders">Leaders du marché</system:String>
+    <system:String x:Key="traidingVolume">Volume de négociation</system:String>
+    <system:String x:Key="transaction">Transaction</system:String>
+    <system:String x:Key="setting">Réglage</system:String>
+    <system:String x:Key="chart">Graphique</system:String>
+    <system:String x:Key="anotherOption">Autre option</system:String>
+    <system:String x:Key="pageSetting">Une page où vous pouvez personnaliser certains paramètres selon vos préférences.</system:String>
+    <system:String x:Key="pageTransaction">Sur cette page, vous pouvez convertir une devise en une autre.</system:String>
+    <system:String x:Key="pageCurrencyOverview">La page fournit des informations détaillées sur une devise spécifique.</system:String>
+    <system:String x:Key="pageTraidingVolume">La page affiche un graphique du volume des transactions.</system:String>
+    <system:String x:Key="pageMarketLeaders">La page présente les principales cryptomonnaies en fonction de leur popularité sur le marché.</system:String>
+    <system:String x:Key="errorDisplay">* Veuillez saisir le nom, le symbole ou le classement de la devise que vous souhaitez afficher.</system:String>
+    <system:String x:Key="search">Recherche.</system:String>
+    <system:String x:Key="emptySearch">* Saisissez les données pour effectuer une recherche.</system:String>
+
+</ResourceDictionary>

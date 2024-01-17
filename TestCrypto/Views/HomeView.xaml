@@ -1,0 +1,279 @@
+﻿<UserControl x:Class="TestCrypto.Views.HomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TestCrypto.Views"
+             xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+             xmlns:viewModel="clr-namespace:TestCrypto.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="560" d:DesignWidth="860">
+
+    <UserControl.DataContext>
+        <viewModel:HomeViewModel/>
+    </UserControl.DataContext>
+
+    <UserControl.Resources>
+        <DataTemplate DataType="{x:Type viewModel:CurrencyOverviewViewModel}">
+            <local:CurrencyOverviewView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModel:MarketLeadersViewModel}">
+            <local:MarketLeadersView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModel:SettingViewModel}">
+            <local:SettingView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModel:TradingVolumeViewModel}">
+            <local:TradingVolumeView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModel:TransactionViewModel}">
+            <local:TransactionView/>
+        </DataTemplate>
+    </UserControl.Resources>
+
+    <Border>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Orientation="Horizontal">
+                <TextBlock Text="{DynamicResource chart}"
+                           Foreground="{DynamicResource titleColor1}"
+                           FontSize="28"
+                           Height="30"
+                           HorizontalAlignment="Left"
+                           Margin="10,-240,0,0"
+                           FontFamily="Montserrate"
+                           FontWeight="Medium"/>
+
+                <RadioButton Grid.Column="0"
+                             Height="200"
+                             Width="375"
+                             Margin="-110,0,0,0"
+                             Style="{StaticResource mainMenuButton}"
+                             Command="{Binding ShowMarketLeadersViewCommand}"
+                             Tag="{DynamicResource color4}">
+                    <StackPanel Height="200" Width="375">
+                        <TextBlock Text="{DynamicResource marketLeaders}"
+                                   Foreground="{DynamicResource titleColor1}"
+                                   FontSize="28"
+                                   HorizontalAlignment="Left"
+                                   Margin="20,10,10,0"
+                                   FontFamily="Montserrate"
+                                   FontWeight="Medium"/>
+
+                        <TextBlock Text="{DynamicResource pageMarketLeaders}"
+                                   TextWrapping="Wrap"
+                                   Foreground="{DynamicResource titleColor1}"
+                                   FontSize="14"
+                                   HorizontalAlignment="Left"
+                                   Margin="20,10,10,0"
+                                   FontFamily="Montserrate"
+                                   FontWeight="Medium"/>
+                        <fa:IconImage Icon="ChartBar"
+                                      Margin="0,0,20,0"
+                                      Height="100"
+                                      Width="100"
+                                      HorizontalAlignment="Right"
+                                      Style="{StaticResource menuButtonIcon}" 
+                                      RenderTransformOrigin="0.5,0.5">
+                            <fa:IconImage.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-38.774"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </fa:IconImage.RenderTransform>
+                        </fa:IconImage>
+                    </StackPanel>
+                </RadioButton>
+
+                <RadioButton Grid.Column="0"
+                             Height="200"
+                             Width="375"
+                             Margin="40,0,0,0"
+                             Style="{StaticResource mainMenuButton}"
+                             Command="{Binding ShowTraidingVolumeViewCommand}"
+                             Tag="{DynamicResource color10}">
+                    <StackPanel Height="200" Width="375">
+                        <TextBlock Text="{DynamicResource traidingVolume}"
+                                   Foreground="{DynamicResource titleColor1}"
+                                   FontSize="28"
+                                   HorizontalAlignment="Left"
+                                   Margin="20,10,10,0"
+                                   FontFamily="Montserrate"
+                                   FontWeight="Medium"/>
+
+                        <TextBlock Text="{DynamicResource pageTraidingVolume}"
+                                   TextWrapping="Wrap"
+                                   Foreground="{DynamicResource titleColor1}"
+                                   FontSize="14"
+                                   HorizontalAlignment="Left"
+                                   Margin="20,10,10,0"
+                                   FontFamily="Montserrate"
+                                   FontWeight="Medium"/>
+                        <fa:IconImage Icon="ChartColumn"
+                                      Margin="0,15,20,0"
+                                      Height="100"
+                                      Width="100"
+                                      HorizontalAlignment="Right"
+                                      Style="{StaticResource menuButtonIcon}" RenderTransformOrigin="0.5,0.5">
+                            <fa:IconImage.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-38.774"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </fa:IconImage.RenderTransform>
+                        </fa:IconImage>
+                    </StackPanel>
+                </RadioButton>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Orientation="Horizontal">
+                <TextBlock Text="{DynamicResource anotherOption}"
+                           Foreground="{DynamicResource titleColor1}"
+                           FontSize="28"
+                           HorizontalAlignment="Left"
+                           Margin="10,0,0,0"
+                           FontFamily="Montserrate"
+                           FontWeight="Medium"/>
+
+                <RadioButton Grid.Column="0"
+                             Height="200"
+                             Width="250"
+                             Margin="-160,0,0,0"
+                             Style="{StaticResource mainMenuButton}"
+                             Command="{Binding ShowCurrencyOverviewViewCommand}"
+                             Tag="{DynamicResource color8}">
+
+                    <StackPanel Height="200" Width="250">
+                        <TextBlock Text="{DynamicResource currencyOverview}"
+                                   Foreground="{DynamicResource titleColor1}"
+                                   FontSize="22"
+                                   HorizontalAlignment="Left"
+                                   Margin="20,10,10,0"
+                                   FontFamily="Montserrate"
+                                   FontWeight="Medium"/>
+
+                        <TextBlock Text="{DynamicResource pageCurrencyOverview}"
+                                   TextWrapping="Wrap"
+                                   Foreground="{DynamicResource titleColor1}"
+                                   FontSize="12"
+                                   HorizontalAlignment="Left"
+                                   Margin="20,10,10,0"
+                                   FontFamily="Montserrate"
+                                   FontWeight="Medium"/>
+                        <fa:IconImage Icon="MagnifyingGlassDollar"
+                                      Margin="0,45,20,0"
+                                      Height="70"
+                                      Width="70"
+                                      HorizontalAlignment="Right"
+                                      Style="{StaticResource menuButtonIcon}" 
+                                      RenderTransformOrigin="0.5,0.5">
+                            <fa:IconImage.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-13.072"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </fa:IconImage.RenderTransform>
+                        </fa:IconImage>
+                    </StackPanel>
+
+                </RadioButton>
+
+                <RadioButton Grid.Column="0"
+                             Height="200"
+                             Width="250"
+                             Margin="20,0,0,0"
+                             Style="{StaticResource mainMenuButton}"
+                             Command="{Binding ShowTransactionViewCommand}" 
+                             Tag="{DynamicResource color9}">
+
+                    <StackPanel Height="200" Width="250">
+                        <TextBlock Text="{DynamicResource transaction}"
+                                   Foreground="{DynamicResource titleColor1}"
+                                   FontSize="22"
+                                   HorizontalAlignment="Left"
+                                   Margin="20,10,10,0"
+                                   FontFamily="Montserrate"
+                                   FontWeight="Medium"/>
+
+                        <TextBlock Text="{DynamicResource pageTransaction}"
+                                   TextWrapping="Wrap"
+                                   Foreground="{DynamicResource titleColor1}"
+                                   FontSize="12"
+                                   HorizontalAlignment="Left"
+                                   Margin="20,10,10,0"
+                                   FontFamily="Montserrate"
+                                   FontWeight="Medium"/>
+                        <fa:IconImage Icon="Wallet"
+                                      Margin="0,40,15,0"
+                                      Height="70"
+                                      Width="70"
+                                      HorizontalAlignment="Right"
+                                      Style="{StaticResource menuButtonIcon}" 
+                                      RenderTransformOrigin="0.5,0.5">
+                            <fa:IconImage.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-34.335"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </fa:IconImage.RenderTransform>
+                        </fa:IconImage>
+                    </StackPanel>
+
+                </RadioButton>
+
+                <RadioButton Grid.Column="0"
+                             Height="200"
+                             Width="250"
+                             Margin="20,0,0,0"
+                             Style="{StaticResource mainMenuButton}"
+                             Command="{Binding ShowSettingViewCommand}"             
+                             Tag="{DynamicResource color6}">
+
+                    <StackPanel Height="200" Width="250">
+                        <TextBlock Text="{DynamicResource setting}"
+                                   Foreground="{DynamicResource titleColor1}"
+                                   FontSize="22"
+                                   HorizontalAlignment="Left"
+                                   Margin="20,10,10,0"
+                                   FontFamily="Montserrate"
+                                   FontWeight="Medium"/>
+
+                        <TextBlock Text="{DynamicResource pageSetting}"
+                                   TextWrapping="Wrap"
+                                   Foreground="{DynamicResource titleColor1}"
+                                   FontSize="12"
+                                   HorizontalAlignment="Left"
+                                   Margin="20,10,10,0"
+                                   FontFamily="Montserrate"
+                                   FontWeight="Medium"/>
+                        <fa:IconImage Icon="Tools"
+                                      Margin="0,40,15,0"
+                                      Height="70"
+                                      Width="70"
+                                      HorizontalAlignment="Right"
+                                      Style="{StaticResource menuButtonIcon}" 
+                                      RenderTransformOrigin="0.5,0.5"/>
+                    </StackPanel>
+
+                </RadioButton>
+            </StackPanel>
+
+            <ContentControl Content="{Binding CurrentChildView}"/>
+        </Grid>
+    </Border>
+</UserControl>

@@ -1,0 +1,91 @@
+﻿<UserControl x:Class="TestCrypto.Views.TradingVolumeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TestCrypto.Views"
+             xmlns:viewModel="clr-namespace:TestCrypto.ViewModels"
+             xmlns:oxy="http://oxyplot.org/wpf"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="960">
+
+    <UserControl.DataContext>
+        <viewModel:TradingVolumeViewModel/>
+    </UserControl.DataContext>
+
+    <Grid>
+        <TextBlock Text="{DynamicResource viewChart1to33}"
+               Height="80"
+               Width="600"
+               TextWrapping="Wrap"
+               FontSize="30"
+               FontWeight="Medium"
+               FontFamily="Montserrat" 
+               Foreground="{DynamicResource titleColor2}"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Left"
+               Margin="50,0,0,0"
+               Visibility="{Binding IsEnableTextBlock}"/>
+
+        <RadioButton Height="150"
+                 Width="170"
+                 Margin="0,0,10,0"
+                 VerticalAlignment="Center"
+                 HorizontalAlignment="Right"
+                 Style="{StaticResource mainMenuButton}"
+                 Tag="{DynamicResource color5}"
+                 CommandParameter="TextBox">
+            <StackPanel>
+                <TextBlock Text="{DynamicResource inputNumber}"
+                       Foreground="{DynamicResource titleColor2}"
+                       FontSize="12"
+                       FontWeight="Medium"
+                       FontFamily="Montserrat"                             
+                       Margin="0,10,0,0"
+                       Padding="10,0,0,0"/>
+                <TextBox x:Name="inputCurrency"
+                     Text="{Binding DataOfInputTextBox}"
+                     FontSize="13"
+                     Width="150"
+                     FontWeight="Medium"
+                     FontFamily="Montserrat"   
+                     BorderThickness="0,0,0,2"
+                     Height="28"
+                     HorizontalAlignment="Right"
+                     Margin="5,5,10,0"
+                     Style="{StaticResource textBox}"/>
+
+                <Button Command="{Binding ShowCandlesChartCommand}"                            
+                    Content="{DynamicResource execute}"
+                    Width="100"
+                    FontSize="12"
+                    FontFamily="Montserrat"
+                    Cursor="Hand"
+                    BorderThickness="0"
+                    Foreground="{DynamicResource titleColor1}"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Left"
+                    Margin="35,20,0,0"
+                    Style="{StaticResource executeButton}"/>
+
+                <TextBlock Text="{Binding ErrorMessage}"
+                           Foreground="{DynamicResource errorMessage}"
+                           FontSize="12"
+                           FontWeight="Medium"
+                           FontFamily="Montserrat"
+                           Margin="10,0,20,0"
+                           Width="130"
+                           Height="Auto"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           TextWrapping="Wrap"/>
+            </StackPanel>
+        </RadioButton>
+        <Grid x:Name="Chart">
+            <oxy:PlotView x:Name="plotView" 
+                      Margin="10, 10, 190, 10"
+                      Background="Transparent"
+                      Model="{Binding PlotModel}"/>
+        </Grid>
+    </Grid>
+</UserControl>

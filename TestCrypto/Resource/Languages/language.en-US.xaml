@@ -1,0 +1,45 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <system:String x:Key="selectOptions">* Select options</system:String>
+    <system:String x:Key="lightOptions">Light</system:String>
+    <system:String x:Key="darkOptions">Dark</system:String>
+    <system:String x:Key="dashboard">Dashboard</system:String>
+    <system:String x:Key="currencyOverview">Currency Overview</system:String>
+    <system:String x:Key="changeLanguage">Change Language</system:String>
+    <system:String x:Key="changeTheme">Change Theme</system:String>
+    <system:String x:Key="save">Save</system:String>
+    <system:String x:Key="fillingCurrency">* Error filling currency data collection</system:String>
+    <system:String x:Key="currencySelection">* Invalid currency selection</system:String>
+    <system:String x:Key="enterCurrency">Enter Currency</system:String>
+    <system:String x:Key="inputCurrency">Input Currency</system:String>
+    <system:String x:Key="outputCurrency">Output Currency</system:String>
+    <system:String x:Key="chooseCurrency">Choose Currency</system:String>
+    <system:String x:Key="convert">Convert</system:String>
+    <system:String x:Key="inputSum">Input Sum</system:String>
+    <system:String x:Key="result">Result</system:String>
+    <system:String x:Key="execute">Execute</system:String>
+    <system:String x:Key="validNumber1and33">* Please enter a valid number between 1 and 33.</system:String>
+    <system:String x:Key="validNumber1and100">* Please enter a valid number between 1 and 100.</system:String>
+    <system:String x:Key="errorLoadingPlot">* Error loading and plotting data.</system:String>
+    <system:String x:Key="viewChart1to33">To view the chart, enter a number from 1 to 33 and press the Execute button.</system:String>
+    <system:String x:Key="viewChart1to100">To view the chart, enter a number from 1 to 100 and press the Execute button.</system:String>
+    <system:String x:Key="inputNumber">Input Number</system:String>
+    <system:String x:Key="invalidUser">Invalid user, not logged in</system:String>
+    <system:String x:Key="marketLeaders">Market Leaders</system:String>
+    <system:String x:Key="traidingVolume">Traiding Volume</system:String>
+    <system:String x:Key="transaction">Transaction</system:String>
+    <system:String x:Key="setting">Setting</system:String>
+    <system:String x:Key="chart">Chart</system:String>
+    <system:String x:Key="anotherOption">Another Option</system:String>
+    <system:String x:Key="pageSetting">A page where you can customize certain settings for yourself.</system:String>
+    <system:String x:Key="pageTransaction">On this page, you can convert one currency to another.</system:String>
+    <system:String x:Key="pageCurrencyOverview">The page provides detailed information about a specific currency.</system:String>
+    <system:String x:Key="pageTraidingVolume">The page displays a chart of trading volume.</system:String>
+    <system:String x:Key="pageMarketLeaders">The page shows the top N cryptocurrencies by popularity in the market.</system:String>
+    <system:String x:Key="errorDisplay">* Please enter the name, symbol, or rank of the currency you want to display.</system:String>
+    <system:String x:Key="search">Search.</system:String>
+    <system:String x:Key="emptySearch">* Enter data to perform a search .</system:String>
+
+</ResourceDictionary>

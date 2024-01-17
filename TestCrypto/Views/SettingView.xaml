@@ -1,0 +1,92 @@
+﻿<UserControl x:Class="TestCrypto.Views.SettingView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TestCrypto.Views"
+             xmlns:viewModel="clr-namespace:TestCrypto.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="960">
+
+    <UserControl.DataContext>
+        <viewModel:SettingViewModel/>
+    </UserControl.DataContext>
+
+    <Grid>
+        <RadioButton Height="200"
+                     Width="250"
+                     Margin="-600,0,0,200"
+                     Style="{StaticResource mainMenuButton}"
+                     Tag="{DynamicResource color3}">
+            <StackPanel HorizontalAlignment="Center" 
+                        VerticalAlignment="Center"
+                        Margin="40,0,0,0">
+                <TextBlock Text="{DynamicResource changeLanguage}"
+                           Foreground="{DynamicResource titleColor2}"
+                           FontSize="12"
+                           FontWeight="Medium"
+                           FontFamily="Montserrat"                             
+                           Margin="0,15,0,0"
+                           Padding="5,0,0,0"/>
+                
+                <ComboBox x:Name="languageBox"
+                          ItemsSource="{Binding DataOfLanguageComboBox}" 
+                          SelectedItem="{Binding LanguageCollection}"
+                          FontSize="13"
+                          Width="150"
+                          FontWeight="Medium"
+                          FontFamily="Montserrat"
+                          BorderThickness="0,0,0,2"
+                          Height="28"
+                          VerticalContentAlignment="Center"
+                          HorizontalAlignment="Center"
+                          Margin="5,5,10,0"
+                          Style="{StaticResource comboBox}"/>
+
+                <TextBlock Text="{DynamicResource changeTheme}"
+                           Foreground="{DynamicResource titleColor2}"
+                           FontSize="12"
+                           FontWeight="Medium"
+                           FontFamily="Montserrat"                             
+                           Margin="0,10,0,0"
+                           Padding="5,0,0,0"/>
+
+                <ComboBox x:Name="themeBox"
+                          ItemsSource="{Binding DataOfThemeComboBox}" 
+                          SelectedItem="{Binding ThemeCollection}"
+                          FontSize="13"
+                          Width="150"
+                          FontWeight="Medium"
+                          FontFamily="Montserrat"
+                          BorderThickness="0,0,0,2"
+                          Height="28"
+                          VerticalContentAlignment="Center"
+                          HorizontalAlignment="Center"
+                          Margin="5,5,10,0"
+                          Style="{StaticResource comboBox}"/>
+
+                <Button Command="{Binding ShowSaveSettingCommand}"                            
+                        Content="{DynamicResource save}"
+                        Width="100"
+                        FontSize="12"
+                        FontFamily="Montserrat"
+                        Cursor="Hand"
+                        BorderThickness="0"
+                        Foreground="{DynamicResource titleColor1}"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Left"
+                        Margin="35,15,0,0"
+                        Style="{StaticResource executeButton}"/>
+
+                <TextBlock Text="{Binding ErrorMessage}"
+                           Foreground="{DynamicResource errorMessage}"
+                           FontSize="12"
+                           Height="20"
+                           FontWeight="Medium"
+                           FontFamily="Montserrat"                             
+                           Margin="0,15,0,0"
+                           TextWrapping="Wrap"/>
+            </StackPanel>
+        </RadioButton>
+    </Grid>
+</UserControl>
