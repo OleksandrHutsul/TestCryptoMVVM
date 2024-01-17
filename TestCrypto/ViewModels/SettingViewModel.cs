@@ -103,6 +103,7 @@ namespace TestCrypto.ViewModels
             }
             else
             {
+                ErrorMessage = "";
                 if (!string.IsNullOrEmpty(LanguageCollection))
                 {
                     SetLanguage();
